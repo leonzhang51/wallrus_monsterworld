@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+/\*\*
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Coding 3 pages web app for IOS
+-
+- @version 1.0
+- @author [Leon Zhang]
+- @date 03/30/2022
+  \*/
 
-## Available Scripts
+Ref:
+Test REACT
 
-In the project directory, you can run:
+Using the Invision project shared with you in the link below we would like you to create a REACT project targeting the latest iOS Safari mobile browser and integrate the 3 views you will find there.
 
-### `npm start`
+We would like to use the document provided in INVISION to do the integration.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+We will provide you with a GItlab repository, you must use the Gitlab to commit your work providing a brief explanation on how to run the project it using a proper README file.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+I will need your Gitlab user name please send it to me as soon as you can.
 
-### `npm test`
+Requirements:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Navigate among the 3 views
+Clicking on ‘ABOUT THE MONSTER WORLD’ links to ‘THE STORY’ view
 
-### `npm run build`
+            Clicking on the ‘START EXPERIENCE’ links to ‘NAME & HEIGHT FORM’ VIEW.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+We would you like to use REACTS hooks
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+We expect the fields YOUR FIRST NAME AND HEIGHT to be validated.
+The NEXT button links back to the ‘HOME PAGE’
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+INVISION
 
-### `npm run eject`
+https://projects.invisionapp.com/d/main#/projects/prototypes/21960267
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+App directory structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+There are 3 components in this app, Home, The story, Name and height, I put them in src/components, all the component can work alone, I don't use any global css or other resource, every component using its own css module. All the relative img file stored in public/img.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+External resource : react router v6,
+Fonts: Imperator and Circular Air import from db.onlinewebfonts.com.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Usage:
+Download the file then extract to the folder you assigned,
+Enter the folder, execute
 
-## Learn More
+npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Enjoy!!!!!!
