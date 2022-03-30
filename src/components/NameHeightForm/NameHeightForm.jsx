@@ -3,31 +3,39 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 export default function NameHeightForm() {
   const [inputFirstNameErr, setInputFirstNameErr] = useState(false);
-
+  const [inputHeightErr, setInputHeightErr] = useState(false);
   const [inputValue, setInputValue] = useState();
   const [inputValueErr, setInputValueErr] = useState(false);
+
   const navigate = useNavigate();
   const handleChange = (e) => {
     let test = { firstName: "", height: "" };
+    console.log(e.target.name);
     setInputValueErr(false);
     if (e.target.name === "firstName") {
       if (e.target.value.match(/^[a-zA-Z]+$/)) {
         test.firstName = e.target.value;
         setInputFirstNameErr(false);
+        setInputHeightErr(false);
         setInputValue(test);
       } else {
         setInputFirstNameErr(true);
       }
     }
     if (e.target.name === "height") {
-      if (e.target.value.match(/\d+/)) {
+      if (e.target.value.match(/\d+/g)) {
         test.height = e.target.value;
+
         setInputFirstNameErr(false);
+        setInputHeightErr(false);
         setInputValue(test);
       } else {
-        setInputFirstNameErr(true);
+        setInputHeightErr(true);
       }
     }
+  };
+  const resetInput = (e) => {
+    e.target.value = "0";
   };
   const submit = () => {
     if (inputValue) {
@@ -65,18 +73,18 @@ export default function NameHeightForm() {
         />
         {inputFirstNameErr && (
           <p style={{ color: "red", textAlign: "center", marginTop: "-1px" }}>
-            Characters Only
+            Please input Characters Only
           </p>
         )}
       </div>
       <div className={styles.inputBlock}>
         <p className={styles.spanInput}>YOUR HEIGHT</p>
-        <input
-          type="number"
-          name="height"
-          className={styles.input}
-          onChange={handleChange}
-        />
+        <input name="height" className={styles.input} onChange={handleChange} />
+        {inputHeightErr && (
+          <p style={{ color: "red", textAlign: "center", marginTop: "-1px" }}>
+            Please input number only
+          </p>
+        )}
       </div>
       <div className={styles.buttonContainer}>
         <button className={styles.buttonNext} onClick={submit}>
