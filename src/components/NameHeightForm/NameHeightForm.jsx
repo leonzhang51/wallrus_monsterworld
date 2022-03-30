@@ -34,9 +34,7 @@ export default function NameHeightForm() {
       }
     }
   };
-  const resetInput = (e) => {
-    e.target.value = "0";
-  };
+
   const submit = () => {
     if (inputValue) {
       navigate("/", { replace: true });
