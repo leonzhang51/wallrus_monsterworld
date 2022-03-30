@@ -1,0 +1,115 @@
+@import url(//db.onlinewebfonts.com/c/b0bc116d1147a46e14ddecc083e553b7?family=Circular+Air+Light);
+@import url(//db.onlinewebfonts.com/c/75a1f6889a05c2303915747df0bf0738?family=Imperator);
+
+.welcomeTo {
+  position: absolute;
+  top: 176px;
+  left: 132px;
+  right: 132px;
+  width: 112px;
+  color: #ffffff;
+  font-family: "Circular Air";
+  font-size: 21px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 27px;
+  text-align: center;
+}
+.fontHeader {
+  position: absolute;
+  top: 220px;
+  left: 41px;
+  width: 291px;
+  color: #ffffff;
+  font-family: Imperator;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 34px;
+  text-align: center;
+}
+.line {
+  position: absolute;
+  top: 321px;
+  left: 137px;
+  box-sizing: border-box;
+  height: 1px;
+  width: 100px;
+  border: 1px solid #ffffff;
+  margin: auto;
+}
+.lorem {
+  position: absolute;
+  top: 340px;
+  left: 43px;
+  height: 92px;
+  width: 291px;
+  color: #ffffff;
+  font-family: "Circular Air";
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 23px;
+  text-align: center;
+  margin: auto;
+}
+
+.inputFirstNameBlock {
+  position: absolute;
+  top: 470px;
+  left: 41px;
+  height: 60px;
+  width: 291px;
+}
+.spanInput {
+  color: #ffffff;
+  font-family: "Circular Air";
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 19px;
+  text-align: center;
+  width: 300px;
+}
+.inputFirstName {
+  height: 40px;
+  width: 100%;
+  border-radius: 30px;
+  background-color: #ffffff;
+}
+
+.inputHeightBlock {
+  position: absolute;
+  top: 590px;
+  left: 41px;
+  height: 60px;
+  width: 291px;
+}
+
+.inputHeight {
+  height: 40px;
+  width: 291px;
+  border-radius: 30px;
+  background-color: #ffffff;
+}
+.buttonContainer {
+  position: absolute;
+  top: 720px;
+  left: 41px;
+}
+.buttonNext {
+  height: 60px;
+  width: 291px;
+  border-radius: 30px;
+  background-color: #191919;
+  border-color: #191919;
+  color: white;
+  font-family: "Circular Air";
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0;
+  border: 0;
+}
+.buttonNext:hover {
+  cursor: grabbing;
+}

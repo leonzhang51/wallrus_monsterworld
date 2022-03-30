@@ -1,0 +1,103 @@
+@import url(//db.onlinewebfonts.com/c/b0bc116d1147a46e14ddecc083e553b7?family=Circular+Air+Light);
+@import url(//db.onlinewebfonts.com/c/75a1f6889a05c2303915747df0bf0738?family=Imperator);
+@import url(//db.onlinewebfonts.com/c/8ef893169826ed67e7d7f61910ff2ab8?family=Circular+Std+Medium+Italic);
+.fontHeader {
+  position: absolute;
+  top: 60px;
+  left: 41px;
+  width: 291px;
+  color: #ffffff;
+  font-family: Imperator;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 34px;
+  text-align: center;
+}
+.line {
+  position: absolute;
+  top: 140px;
+  left: 137px;
+  box-sizing: border-box;
+  height: 1px;
+  width: 100px;
+  border: 1px solid #ffffff;
+  margin: auto;
+}
+.imgHistory {
+  position: absolute;
+  top: 270px;
+  left: 43px;
+  width: 308px;
+  height: 147px;
+}
+.paragraph1 {
+  position: absolute;
+  top: 166px;
+  left: 43px;
+  height: 92px;
+  width: 291px;
+  color: #ffffff;
+  font-family: "Circular Air";
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 23px;
+  text-align: center;
+  margin: auto;
+}
+.paragraph2 {
+  position: absolute;
+  top: 446px;
+  left: 43px;
+  height: 92px;
+  width: 291px;
+  color: #ffffff;
+  font-family: "Circular Air";
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 23px;
+  text-align: center;
+  margin: auto;
+}
+.paragraph3 {
+  position: absolute;
+  top: 556px;
+  left: 43px;
+  height: 92px;
+  width: 291px;
+  color: #ffffff;
+  font-family: "Circular Air";
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 23px;
+  text-align: center;
+  margin: auto;
+}
+.paragraph4 {
+  position: absolute;
+  top: 846px;
+  left: 43px;
+  height: 92px;
+  width: 291px;
+  color: #ffffff;
+  font-family: "Circular Air";
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 23px;
+  text-align: center;
+  margin: auto;
+}
+.paragraph4 em {
+  font-family: "Circular Std Medium Italic";
+}
+.imgTruth {
+  position: absolute;
+  top: 670px;
+  left: 43px;
+  width: 308px;
+  height: 173px;
+}
