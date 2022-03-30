@@ -40,26 +40,26 @@ export default function NameHeightForm() {
     <section
       style={{
         height: "100vh",
-        width: "375px",
+        width: "100VW",
 
         backgroundImage: `url(${
           window.location.origin + "/img/home/AppBackground.jpg"
         })`,
-        backgroundSize: "375px 860px",
+        backgroundSize: "100VW 100VH",
         backgroundRepeat: "no-repeat",
       }}
     >
       <h1 className={styles.fontHeader}>THE SECRET LIFE OF MONSTERS</h1>
 
       <div className={styles.line}></div>
-      <p className={styles.lorem}>
+      <p className={styles.description}>
         Before we start, can you tell us a little bit about yourself?
       </p>
-      <div className={styles.inputFirstNameBlock}>
+      <div className={styles.inputBlock}>
         <p className={styles.spanInput}>YOUR FIRST NAME</p>
         <input
           name="firstName"
-          className={styles.inputFirstName}
+          className={styles.input}
           onChange={handleChange}
           onClick={() => setInputFirstNameErr(false)}
         />
@@ -69,12 +69,12 @@ export default function NameHeightForm() {
           </p>
         )}
       </div>
-      <div className={styles.inputHeightBlock}>
+      <div className={styles.inputBlock}>
         <p className={styles.spanInput}>YOUR HEIGHT</p>
         <input
           type="number"
           name="height"
-          className={styles.inputHeight}
+          className={styles.input}
           onChange={handleChange}
         />
       </div>

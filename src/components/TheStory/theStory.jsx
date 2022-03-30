@@ -6,44 +6,50 @@ export default function TheStory() {
     <section
       style={{
         height: "100vh",
-        width: "375px",
+        width: "100vw",
 
         backgroundImage: `url(${
           window.location.origin + "/img/theStory/storyBg.png"
         })`,
-        backgroundSize: "375px 1000px",
+        backgroundSize: "100vw 100vh",
         backgroundRepeat: "no-repeat",
       }}
     >
       <h1 className={styles.fontHeader}>THE STORY</h1>
 
       <div className={styles.line}></div>
-      <p className={styles.paragraph1}>
+      <p className={styles.paragraph}>
         Monsters have always existed. Since our earliest recorded history, there
         have been stories about encounters and adventures with these mysterious
         creatures.
       </p>
-      <img
-        src={window.location.origin + "/img/theStory/story1.png"}
-        alt="history"
-        className={styles.imgHistory}
-      />
-      <p className={styles.paragraph2}>
+      <div className={styles.imgContainer}>
+        <img
+          src={window.location.origin + "/img/theStory/story1.png"}
+          alt="history"
+          className={styles.img}
+        />
+      </div>
+
+      <p className={styles.paragraph}>
         You probably don't know this, but monsters live in a world very similar
         to ours. A world just outside of our reach, on the other side of the
         veil.
       </p>
-      <p className={styles.paragraph3}>
+      <p className={styles.paragraph}>
         What would you say if I told you that we found a way to peek at the
         other side? To open a window and let you venture into that other world
         using nothing but your mobile device?
       </p>
-      <img
-        src={window.location.origin + "/img/theStory/story2.png"}
-        alt="truth"
-        className={styles.imgTruth}
-      />
-      <div className={styles.paragraph4}>
+      <div className={styles.imgContainer}>
+        <img
+          src={window.location.origin + "/img/theStory/story2.png"}
+          alt="truth"
+          className={styles.img}
+        />
+      </div>
+
+      <div className={styles.paragraph}>
         <p>
           Come and take a peek, at the <em>Secret Life of Monsters.</em>
         </p>

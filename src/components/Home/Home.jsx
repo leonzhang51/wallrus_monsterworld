@@ -20,19 +20,19 @@ export default function Home() {
       <h1 className={styles.fontHeader}>THE SECRET LIFE OF MONSTERS</h1>
 
       <div className={styles.line}></div>
-      <p className={styles.lorem}>
+      <p className={styles.description}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ex nam
         labore rerum Esse ex nam labore rerum
       </p>
       <div className={styles.buttonGroup}>
         <button
-          className={styles.buttonAbout}
+          className={styles.button}
           onClick={() => navigate("/theStory", { replace: true })}
         >
           ABOUT THE MONSTER'S WORLD
         </button>
         <button
-          className={styles.buttonStart}
+          className={styles.button}
           onClick={() => navigate("/nameHeightForm", { replace: true })}
         >
           START THE EXPERIENCE
