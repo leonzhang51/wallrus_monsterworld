@@ -6,16 +6,15 @@ export default function NameHeightForm() {
   const [inputHeightErr, setInputHeightErr] = useState(false);
   const [inputValue, setInputValue] = useState();
   const [inputValueErr, setInputValueErr] = useState(false);
-
+  //Navigation hooks from react router library
   const navigate = useNavigate();
+  const inputValidate = (inputName, value) => {
+    let test = {};
+    test[inputName] = value;
+  };
   const handleChange = (e) => {
     let test = { firstName: "", height: "" };
-    // if (!e.target.value) {
-    //   console.log("no input value");
-
-    //   console.log(inputFirstNameErr);
-    // }
-
+    //inputValidate(e.target.name, e.target.value);
     setInputValueErr(false);
     if (e.target.name === "firstName") {
       if (e.target.value) {
@@ -33,7 +32,7 @@ export default function NameHeightForm() {
     }
     if (e.target.name === "height") {
       if (e.target.value) {
-        if (e.target.value.match(/\d+/g)) {
+        if (e.target.value.match(/^[0-9]*$/)) {
           test.height = e.target.value;
 
           setInputFirstNameErr(false);
