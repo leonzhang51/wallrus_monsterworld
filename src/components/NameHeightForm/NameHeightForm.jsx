@@ -8,43 +8,27 @@ export default function NameHeightForm() {
   const [inputValueErr, setInputValueErr] = useState(false);
   //Navigation hooks from react router library
   const navigate = useNavigate();
-  const inputValidate = (inputName, value) => {
-    let test = {};
-    test[inputName] = value;
+  const inputValidate = (inputName, inputValue) => {
+    const testPattern = { firstName: /^[a-zA-Z]+$/, height: /^[0-9]*$/ };
+    if (inputValue) {
+      if (inputValue.match(testPattern[inputName])) {
+        setInputFirstNameErr(false);
+        setInputHeightErr(false);
+        setInputValue(inputValue);
+      } else {
+        inputName === "firstName"
+          ? setInputFirstNameErr(true)
+          : setInputHeightErr(true);
+      }
+    } else {
+      inputName === "firstName"
+        ? setInputFirstNameErr(false)
+        : setInputHeightErr(false);
+    }
   };
   const handleChange = (e) => {
-    let test = { firstName: "", height: "" };
-    //inputValidate(e.target.name, e.target.value);
+    inputValidate(e.target.name, e.target.value);
     setInputValueErr(false);
-    if (e.target.name === "firstName") {
-      if (e.target.value) {
-        if (e.target.value.match(/^[a-zA-Z]+$/)) {
-          test.firstName = e.target.value;
-          setInputFirstNameErr(false);
-          setInputHeightErr(false);
-          setInputValue(test);
-        } else {
-          setInputFirstNameErr(true);
-        }
-      } else {
-        setInputFirstNameErr(false);
-      }
-    }
-    if (e.target.name === "height") {
-      if (e.target.value) {
-        if (e.target.value.match(/^[0-9]*$/)) {
-          test.height = e.target.value;
-
-          setInputFirstNameErr(false);
-          setInputHeightErr(false);
-          setInputValue(test);
-        } else {
-          setInputHeightErr(true);
-        }
-      } else {
-        setInputHeightErr(false);
-      }
-    }
   };
 
   const submit = () => {
@@ -80,6 +64,7 @@ export default function NameHeightForm() {
           className={styles.input}
           onChange={handleChange}
           onClick={() => setInputFirstNameErr(false)}
+          placeholder="character only"
         />
         {inputFirstNameErr && (
           <p style={{ color: "red", textAlign: "center", marginTop: "-1px" }}>
@@ -89,7 +74,12 @@ export default function NameHeightForm() {
       </div>
       <div className={styles.inputBlock}>
         <p className={styles.spanInput}>YOUR HEIGHT</p>
-        <input name="height" className={styles.input} onChange={handleChange} />
+        <input
+          name="height"
+          className={styles.input}
+          onChange={handleChange}
+          placeholder="number only"
+        />
         {inputHeightErr && (
           <p style={{ color: "red", textAlign: "center", marginTop: "-1px" }}>
             Please input number only
@@ -98,7 +88,7 @@ export default function NameHeightForm() {
       </div>
       <div className={styles.buttonContainer}>
         <button className={styles.buttonNext} onClick={submit}>
-          NEXT
+          START
         </button>
         {inputValueErr && (
           <p style={{ color: "red", textAlign: "center", marginTop: "" }}>
