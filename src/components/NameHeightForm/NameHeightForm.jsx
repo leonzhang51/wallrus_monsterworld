@@ -10,27 +10,40 @@ export default function NameHeightForm() {
   const navigate = useNavigate();
   const handleChange = (e) => {
     let test = { firstName: "", height: "" };
-    console.log(e.target.name);
+    // if (!e.target.value) {
+    //   console.log("no input value");
+
+    //   console.log(inputFirstNameErr);
+    // }
+
     setInputValueErr(false);
     if (e.target.name === "firstName") {
-      if (e.target.value.match(/^[a-zA-Z]+$/)) {
-        test.firstName = e.target.value;
-        setInputFirstNameErr(false);
-        setInputHeightErr(false);
-        setInputValue(test);
+      if (e.target.value) {
+        if (e.target.value.match(/^[a-zA-Z]+$/)) {
+          test.firstName = e.target.value;
+          setInputFirstNameErr(false);
+          setInputHeightErr(false);
+          setInputValue(test);
+        } else {
+          setInputFirstNameErr(true);
+        }
       } else {
-        setInputFirstNameErr(true);
+        setInputFirstNameErr(false);
       }
     }
     if (e.target.name === "height") {
-      if (e.target.value.match(/\d+/g)) {
-        test.height = e.target.value;
+      if (e.target.value) {
+        if (e.target.value.match(/\d+/g)) {
+          test.height = e.target.value;
 
-        setInputFirstNameErr(false);
-        setInputHeightErr(false);
-        setInputValue(test);
+          setInputFirstNameErr(false);
+          setInputHeightErr(false);
+          setInputValue(test);
+        } else {
+          setInputHeightErr(true);
+        }
       } else {
-        setInputHeightErr(true);
+        setInputHeightErr(false);
       }
     }
   };
@@ -46,7 +59,7 @@ export default function NameHeightForm() {
     <section
       style={{
         height: "100vh",
-        width: "100VW",
+        width: "100vw",
 
         backgroundImage: `url(${
           window.location.origin + "/img/home/AppBackground.jpg"
